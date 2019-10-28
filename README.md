@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+
+npm install bootstrap --save
+
+npm install angular-6-social-login
+
+Create a Google App and Get client Id. The first thing we need is to create a Google Project to get user credentials. Go to the Google API 
+Console and click on Credentials. Click on Create Credentials and choose OAuth client ID.
