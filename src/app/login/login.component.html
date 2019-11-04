@@ -1,50 +1,47 @@
-<div class="container" style="padding-top: 60px">
-  <div class="row">
-    <div class="col-md-6 mx-auto">
-      <div class="card-body">
-        <form name="form">
-          <!--<button type="submit" class="btn btn-block btn-success">Login</button>-->
-          <div style="padding-top: 20px;" class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="icon-user"></i></span>
-            </div>
-            <input type="text" name="UserName" class="form-control sty1" placeholder="Email"
-                   required>
-          </div>
-          <div class="input-group mb-4">
-            <div class="input-group-prepend">
-              <span class="input-group-text"><i class="icon-lock"></i></span>
-            </div>
-            <input type="password" name="Password" class="form-control" placeholder="Password">
-          </div>
-          <div>
-            <p style="color:#E92626;font-size:20px;font-weight:normal" Class="success" align="left">
-              {{errorMessage}}
-            </p>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <button type="submit" class="btn btn-primary px-4">Login</button>
-            </div>
-            <div class="col-6 text-right">
-              <button type="button" class="btn btn-link px-0">Forgot password?</button>
-            </div>
-          </div>
-        </form>
-        <hr style="border-top: 1px solid #eee;">
-        <div class="row">
-          <div class="col-6">
-            <button (click)="socialSignIn('facebook')" class="loginBtn loginBtn--facebook">
-              Login with Facebook
-            </button>
-          </div>
-          <div class="col-6 text-right">
-            <button (click)="socialSignIn('google')" class="loginBtn loginBtn--google">
-              Login with Google
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<mat-card class="example-card" [style.backgroundColor]="'palegreen'">
+  <mat-card-header>
+    <mat-card-title class="title-style">Sign In</mat-card-title>
+  </mat-card-header>
+  <mat-card-content style="margin-top: 5px">
+    <form class="example-form">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width">
+              <mat-icon matPrefix>email</mat-icon>
+              <input matInput placeholder="Email" [(ngModel)]="username" name="username" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td><mat-form-field class="example-full-width">
+            <mat-icon matPrefix>vpn_key</mat-icon>
+            <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+          </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+  </mat-card-content>
+  <mat-card-actions>
+    <button style="width: 80%;margin-left: 10%" mat-raised-button (click)="login()" color="primary">Login</button>
+  </mat-card-actions>
+  <span class="example-align-center">OR</span>
+  <mat-card-actions style="margin-bottom: 8px;">
+    <button mat-raised-button (click)="socialSignIn('facebook')"
+            class="loginBtn loginBtn--facebook" style="width: 80%;margin-left: 10%">
+      Login with Facebook
+    </button>
+  </mat-card-actions>
+  <mat-card-actions>
+    <button mat-raised-button (click)="socialSignIn('google')"
+            class="loginBtn loginBtn--google" style="width: 80%;margin-left: 10%">
+      Login with Google
+    </button>
+  </mat-card-actions>
+  <mat-card-actions>
+    <a [routerLink]="['/reset']">Forgot Password</a>
+    <a [routerLink]="['/register']" style="float: right">Sign Up</a>
+  </mat-card-actions>
+</mat-card>

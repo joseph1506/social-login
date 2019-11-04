@@ -1,0 +1,38 @@
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+.example-card {
+  width: 350px;
+  margin: 4% auto;
+}
+.mat-card-title{
+  font-size: 16px;
+}
+.example-full-width{
+  width: 100%;
+}
+
+.example-align-center{
+  margin-left: 45%;
+}
+
+.title-style{
+  color: white;
+  padding-left: 110px;
+  padding-top: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.icon {
+  width: 20%;
+}
+
+.input-field{
+  width: 80%;
+  margin-left: 10px;
+}
