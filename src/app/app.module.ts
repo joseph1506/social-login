@@ -12,6 +12,7 @@ import {AngularMaterialModule} from './angular-material.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {ForgotpwdComponent} from './forgotpwd/forgotpwd.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 export function socialConfigs() {
   const config = new AuthServiceConfig(
@@ -34,7 +35,8 @@ export function socialConfigs() {
     LoginComponent,
     DashboardComponent,
     RegisterComponent,
-    ForgotpwdComponent
+    ForgotpwdComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
